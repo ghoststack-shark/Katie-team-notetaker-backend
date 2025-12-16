@@ -18,11 +18,11 @@ app.use(express.json({ limit: "2mb" }));
  * - SHARED_SECRET                shared secret for simple auth between n8n <-> backend
  * - MONGODB_URI                  MongoDB connection string
  */
-const RECALL_API_KEY = process.env.RECALL_API_KEY || "51a80f00d4d45a431f62274ee6c83c9784528732";
-const RECALL_BASE_URL = process.env.RECALL_BASE_URL || "https://us-east-1.recall.ai/api/v1";
-const N8N_BOT_STATUS_WEBHOOK_URL = process.env.N8N_BOT_STATUS_WEBHOOK_URL || "";
-const SHARED_SECRET = process.env.SHARED_SECRET || "";
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/katie-notetaker";
+const RECALL_API_KEY = process.env.RECALL_API_KEY;
+const RECALL_BASE_URL = process.env.RECALL_BASE_URL;
+const N8N_BOT_STATUS_WEBHOOK_URL = process.env.N8N_BOT_STATUS_WEBHOOK_URL;
+const SHARED_SECRET = process.env.SHARED_SECRET;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // Mongoose schema for Meeting
 const meetingSchema = new mongoose.Schema(
