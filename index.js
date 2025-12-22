@@ -279,13 +279,13 @@ app.post("/recall/webhook", async (req, res) => {
     if (shouldNotify && N8N_BOT_STATUS_WEBHOOK_URL) {
       await axios.post(
         N8N_BOT_STATUS_WEBHOOK_URL,
-        { meetingId, status: n8nStatus, timestamp },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            "x-api-key": SHARED_SECRET,
-          },
-        }
+        { meetingId, status: n8nStatus, timestamp }
+        // {
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //     "x-api-key": SHARED_SECRET,
+        //   },
+        // }
       );
       console.log("[recallWebhook] Forwarded to n8n:", { meetingId, status: n8nStatus, timestamp });
     }
